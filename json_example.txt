@@ -1,0 +1,1175 @@
+// 20200520204831
+// http://api.aviationstack.com/v1/flights?access_key=f7ee848f3cbbc79fefc77675178c362e&dep_iata=FLN
+
+{
+  "pagination": {
+    "limit": 100,
+    "offset": 0,
+    "count": 23,
+    "total": 23
+  },
+  "data": [
+    {
+      "flight_date": "2020-05-21",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": "1",
+        "gate": null,
+        "delay": null,
+        "scheduled": "2020-05-21T19:55:00+00:00",
+        "estimated": "2020-05-21T19:55:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Aeroporto Internacional Guarulhos",
+        "timezone": "America/Sao_Paulo",
+        "iata": "GRU",
+        "icao": "SBGR",
+        "terminal": "2",
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-21T21:15:00+00:00",
+        "estimated": "2020-05-21T21:15:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "LATAM Airlines",
+        "iata": "LA",
+        "icao": "LAN"
+      },
+      "flight": {
+        "number": "3611",
+        "iata": "LA3611",
+        "icao": "LAN3611",
+        "codeshared": {
+          "airline_name": "latam airlines brasil",
+          "airline_iata": "jj",
+          "airline_icao": "tam",
+          "flight_number": "3611",
+          "flight_iata": "jj3611",
+          "flight_icao": "tam3611"
+        }
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2020-05-21",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": "1",
+        "gate": null,
+        "delay": null,
+        "scheduled": "2020-05-21T19:55:00+00:00",
+        "estimated": "2020-05-21T19:55:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Aeroporto Internacional Guarulhos",
+        "timezone": "America/Sao_Paulo",
+        "iata": "GRU",
+        "icao": "SBGR",
+        "terminal": "2",
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-21T21:15:00+00:00",
+        "estimated": "2020-05-21T21:15:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "LATAM Airlines Brasil",
+        "iata": "JJ",
+        "icao": "TAM"
+      },
+      "flight": {
+        "number": "3611",
+        "iata": "JJ3611",
+        "icao": "TAM3611",
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2020-05-21",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2020-05-21T06:05:00+00:00",
+        "estimated": "2020-05-21T06:05:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Viracopos (Campinas International)",
+        "timezone": "America/Sao_Paulo",
+        "iata": "VCP",
+        "icao": "SBKP",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-21T07:20:00+00:00",
+        "estimated": "2020-05-21T07:20:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "TAP Air Portugal",
+        "iata": "TP",
+        "icao": "TAP"
+      },
+      "flight": {
+        "number": "6135",
+        "iata": "TP6135",
+        "icao": "TAP6135",
+        "codeshared": {
+          "airline_name": "azul",
+          "airline_iata": "ad",
+          "airline_icao": "azu",
+          "flight_number": "4039",
+          "flight_iata": "ad4039",
+          "flight_icao": "azu4039"
+        }
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2020-05-21",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2020-05-21T06:05:00+00:00",
+        "estimated": "2020-05-21T06:05:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Viracopos (Campinas International)",
+        "timezone": "America/Sao_Paulo",
+        "iata": "VCP",
+        "icao": "SBKP",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-21T07:20:00+00:00",
+        "estimated": "2020-05-21T07:20:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Azul",
+        "iata": "AD",
+        "icao": "AZU"
+      },
+      "flight": {
+        "number": "4039",
+        "iata": "AD4039",
+        "icao": "AZU4039",
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2020-05-21",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2020-05-21T06:10:00+00:00",
+        "estimated": "2020-05-21T06:10:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Aeroporto Internacional Guarulhos",
+        "timezone": "America/Sao_Paulo",
+        "iata": "GRU",
+        "icao": "SBGR",
+        "terminal": "2",
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-21T07:30:00+00:00",
+        "estimated": "2020-05-21T07:30:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Gol",
+        "iata": "G3",
+        "icao": "GLO"
+      },
+      "flight": {
+        "number": "2743",
+        "iata": "G32743",
+        "icao": "GLO2743",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "PR-GTC",
+        "iata": "B738",
+        "icao": "B738",
+        "icao24": "E47F4F"
+      },
+      "live": {
+        "updated": "2020-05-20T09:48:00+00:00",
+        "latitude": -24.8,
+        "longitude": -46.76,
+        "altitude": 3977.64,
+        "direction": 359.83,
+        "speed_horizontal": 635.256,
+        "speed_vertical": -40.968,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2020-05-21",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2020-05-21T09:35:00+00:00",
+        "estimated": "2020-05-21T09:35:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Aeroporto Internacional Guarulhos",
+        "timezone": "America/Sao_Paulo",
+        "iata": "GRU",
+        "icao": "SBGR",
+        "terminal": "2",
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-21T10:45:00+00:00",
+        "estimated": "2020-05-21T10:45:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Lufthansa",
+        "iata": "LH",
+        "icao": "DLH"
+      },
+      "flight": {
+        "number": "4689",
+        "iata": "LH4689",
+        "icao": "DLH4689",
+        "codeshared": {
+          "airline_name": "latam airlines brasil",
+          "airline_iata": "jj",
+          "airline_icao": "tam",
+          "flight_number": "3511",
+          "flight_iata": "jj3511",
+          "flight_icao": "tam3511"
+        }
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2020-05-21",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2020-05-21T09:35:00+00:00",
+        "estimated": "2020-05-21T09:35:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Aeroporto Internacional Guarulhos",
+        "timezone": "America/Sao_Paulo",
+        "iata": "GRU",
+        "icao": "SBGR",
+        "terminal": "2",
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-21T10:45:00+00:00",
+        "estimated": "2020-05-21T10:45:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "LATAM Airlines",
+        "iata": "LA",
+        "icao": "LAN"
+      },
+      "flight": {
+        "number": "3511",
+        "iata": "LA3511",
+        "icao": "LAN3511",
+        "codeshared": {
+          "airline_name": "latam airlines brasil",
+          "airline_iata": "jj",
+          "airline_icao": "tam",
+          "flight_number": "3511",
+          "flight_iata": "jj3511",
+          "flight_icao": "tam3511"
+        }
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2020-05-21",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2020-05-21T09:35:00+00:00",
+        "estimated": "2020-05-21T09:35:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Aeroporto Internacional Guarulhos",
+        "timezone": "America/Sao_Paulo",
+        "iata": "GRU",
+        "icao": "SBGR",
+        "terminal": "2",
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-21T10:45:00+00:00",
+        "estimated": "2020-05-21T10:45:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "LATAM Airlines Brasil",
+        "iata": "JJ",
+        "icao": "TAM"
+      },
+      "flight": {
+        "number": "3511",
+        "iata": "JJ3511",
+        "icao": "TAM3511",
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2020-05-20",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2020-05-20T11:35:00+00:00",
+        "estimated": "2020-05-20T11:35:00+00:00",
+        "actual": "2020-05-20T11:22:00+00:00",
+        "estimated_runway": "2020-05-20T11:31:00+00:00",
+        "actual_runway": "2020-05-20T11:31:00+00:00"
+      },
+      "arrival": {
+        "airport": "Aeroporto Municipalcipal Chapeco",
+        "timezone": "America/Sao_Paulo",
+        "iata": "XAP",
+        "icao": "SBCH",
+        "terminal": "1",
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-20T12:40:00+00:00",
+        "estimated": "2020-05-20T12:40:00+00:00",
+        "actual": "2020-05-20T12:16:00+00:00",
+        "estimated_runway": "2020-05-20T12:11:00+00:00",
+        "actual_runway": "2020-05-20T12:11:00+00:00"
+      },
+      "airline": {
+        "name": "Azul",
+        "iata": "AD",
+        "icao": "AZU"
+      },
+      "flight": {
+        "number": "2978",
+        "iata": "AD2978",
+        "icao": "AZU2978",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "PR-YRZ",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "E494B4"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2020-05-20",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": null,
+        "gate": null,
+        "delay": 3,
+        "scheduled": "2020-05-20T06:05:00+00:00",
+        "estimated": "2020-05-20T06:05:00+00:00",
+        "actual": "2020-05-20T06:08:00+00:00",
+        "estimated_runway": "2020-05-20T06:19:00+00:00",
+        "actual_runway": "2020-05-20T06:19:00+00:00"
+      },
+      "arrival": {
+        "airport": "Viracopos (Campinas International)",
+        "timezone": "America/Sao_Paulo",
+        "iata": "VCP",
+        "icao": "SBKP",
+        "terminal": "A",
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-20T07:20:00+00:00",
+        "estimated": "2020-05-20T07:20:00+00:00",
+        "actual": "2020-05-20T07:20:00+00:00",
+        "estimated_runway": "2020-05-20T07:12:00+00:00",
+        "actual_runway": "2020-05-20T07:12:00+00:00"
+      },
+      "airline": {
+        "name": "TAP Air Portugal",
+        "iata": "TP",
+        "icao": "TAP"
+      },
+      "flight": {
+        "number": "6135",
+        "iata": "TP6135",
+        "icao": "TAP6135",
+        "codeshared": {
+          "airline_name": "azul",
+          "airline_iata": "ad",
+          "airline_icao": "azu",
+          "flight_number": "4039",
+          "flight_iata": "ad4039",
+          "flight_icao": "azu4039"
+        }
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2020-05-20",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": null,
+        "gate": null,
+        "delay": 3,
+        "scheduled": "2020-05-20T06:05:00+00:00",
+        "estimated": "2020-05-20T06:05:00+00:00",
+        "actual": "2020-05-20T06:08:00+00:00",
+        "estimated_runway": "2020-05-20T06:19:00+00:00",
+        "actual_runway": "2020-05-20T06:19:00+00:00"
+      },
+      "arrival": {
+        "airport": "Viracopos (Campinas International)",
+        "timezone": "America/Sao_Paulo",
+        "iata": "VCP",
+        "icao": "SBKP",
+        "terminal": "A",
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-20T07:20:00+00:00",
+        "estimated": "2020-05-20T07:20:00+00:00",
+        "actual": "2020-05-20T07:20:00+00:00",
+        "estimated_runway": "2020-05-20T07:12:00+00:00",
+        "actual_runway": "2020-05-20T07:12:00+00:00"
+      },
+      "airline": {
+        "name": "Azul",
+        "iata": "AD",
+        "icao": "AZU"
+      },
+      "flight": {
+        "number": "4039",
+        "iata": "AD4039",
+        "icao": "AZU4039",
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2020-05-20",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2020-05-20T06:10:00+00:00",
+        "estimated": "2020-05-20T06:10:00+00:00",
+        "actual": "2020-05-20T06:03:00+00:00",
+        "estimated_runway": "2020-05-20T06:10:00+00:00",
+        "actual_runway": "2020-05-20T06:10:00+00:00"
+      },
+      "arrival": {
+        "airport": "Aeroporto Internacional Guarulhos",
+        "timezone": "America/Sao_Paulo",
+        "iata": "GRU",
+        "icao": "SBGR",
+        "terminal": "2",
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-20T07:30:00+00:00",
+        "estimated": "2020-05-20T07:30:00+00:00",
+        "actual": "2020-05-20T07:06:00+00:00",
+        "estimated_runway": "2020-05-20T06:59:00+00:00",
+        "actual_runway": "2020-05-20T06:59:00+00:00"
+      },
+      "airline": {
+        "name": "Gol",
+        "iata": "G3",
+        "icao": "GLO"
+      },
+      "flight": {
+        "number": "2743",
+        "iata": "G32743",
+        "icao": "GLO2743",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "PR-GTC",
+        "iata": "B738",
+        "icao": "B738",
+        "icao24": "E47F4F"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2020-05-20",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2020-05-20T17:35:00+00:00",
+        "estimated": "2020-05-20T17:35:00+00:00",
+        "actual": "2020-05-20T17:28:00+00:00",
+        "estimated_runway": "2020-05-20T17:36:00+00:00",
+        "actual_runway": "2020-05-20T17:36:00+00:00"
+      },
+      "arrival": {
+        "airport": "Viracopos (Campinas International)",
+        "timezone": "America/Sao_Paulo",
+        "iata": "VCP",
+        "icao": "SBKP",
+        "terminal": "1",
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-20T18:55:00+00:00",
+        "estimated": "2020-05-20T18:55:00+00:00",
+        "actual": "2020-05-20T18:31:00+00:00",
+        "estimated_runway": "2020-05-20T18:25:00+00:00",
+        "actual_runway": "2020-05-20T18:25:00+00:00"
+      },
+      "airline": {
+        "name": "TAP Air Portugal",
+        "iata": "TP",
+        "icao": "TAP"
+      },
+      "flight": {
+        "number": "5137",
+        "iata": "TP5137",
+        "icao": "TAP5137",
+        "codeshared": {
+          "airline_name": "azul",
+          "airline_iata": "ad",
+          "airline_icao": "azu",
+          "flight_number": "2487",
+          "flight_iata": "ad2487",
+          "flight_icao": "azu2487"
+        }
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2020-05-20",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2020-05-20T17:35:00+00:00",
+        "estimated": "2020-05-20T17:35:00+00:00",
+        "actual": "2020-05-20T17:28:00+00:00",
+        "estimated_runway": "2020-05-20T17:36:00+00:00",
+        "actual_runway": "2020-05-20T17:36:00+00:00"
+      },
+      "arrival": {
+        "airport": "Viracopos (Campinas International)",
+        "timezone": "America/Sao_Paulo",
+        "iata": "VCP",
+        "icao": "SBKP",
+        "terminal": "1",
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-20T18:55:00+00:00",
+        "estimated": "2020-05-20T18:55:00+00:00",
+        "actual": "2020-05-20T18:31:00+00:00",
+        "estimated_runway": "2020-05-20T18:25:00+00:00",
+        "actual_runway": "2020-05-20T18:25:00+00:00"
+      },
+      "airline": {
+        "name": "Azul",
+        "iata": "AD",
+        "icao": "AZU"
+      },
+      "flight": {
+        "number": "2487",
+        "iata": "AD2487",
+        "icao": "AZU2487",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "PR-YRZ",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "E494B4"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2020-05-19",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": "1",
+        "gate": "8",
+        "delay": null,
+        "scheduled": "2020-05-19T09:35:00+00:00",
+        "estimated": "2020-05-19T09:35:00+00:00",
+        "actual": "2020-05-19T09:33:00+00:00",
+        "estimated_runway": "2020-05-19T09:42:00+00:00",
+        "actual_runway": "2020-05-19T09:42:00+00:00"
+      },
+      "arrival": {
+        "airport": "Aeroporto Internacional Guarulhos",
+        "timezone": "America/Sao_Paulo",
+        "iata": "GRU",
+        "icao": "SBGR",
+        "terminal": "2",
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-19T10:45:00+00:00",
+        "estimated": "2020-05-19T10:45:00+00:00",
+        "actual": "2020-05-19T10:42:00+00:00",
+        "estimated_runway": "2020-05-19T10:35:00+00:00",
+        "actual_runway": "2020-05-19T10:35:00+00:00"
+      },
+      "airline": {
+        "name": "LATAM Airlines",
+        "iata": "LA",
+        "icao": "LAN"
+      },
+      "flight": {
+        "number": "3511",
+        "iata": "LA3511",
+        "icao": "LAN3511",
+        "codeshared": {
+          "airline_name": "latam airlines brasil",
+          "airline_iata": "jj",
+          "airline_icao": "tam",
+          "flight_number": "3511",
+          "flight_iata": "jj3511",
+          "flight_icao": "tam3511"
+        }
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2020-05-19",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": "1",
+        "gate": "8",
+        "delay": null,
+        "scheduled": "2020-05-19T09:35:00+00:00",
+        "estimated": "2020-05-19T09:35:00+00:00",
+        "actual": "2020-05-19T09:33:00+00:00",
+        "estimated_runway": "2020-05-19T09:42:00+00:00",
+        "actual_runway": "2020-05-19T09:42:00+00:00"
+      },
+      "arrival": {
+        "airport": "Aeroporto Internacional Guarulhos",
+        "timezone": "America/Sao_Paulo",
+        "iata": "GRU",
+        "icao": "SBGR",
+        "terminal": "2",
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-19T10:45:00+00:00",
+        "estimated": "2020-05-19T10:45:00+00:00",
+        "actual": "2020-05-19T10:42:00+00:00",
+        "estimated_runway": "2020-05-19T10:35:00+00:00",
+        "actual_runway": "2020-05-19T10:35:00+00:00"
+      },
+      "airline": {
+        "name": "LATAM Airlines Brasil",
+        "iata": "JJ",
+        "icao": "TAM"
+      },
+      "flight": {
+        "number": "3511",
+        "iata": "JJ3511",
+        "icao": "TAM3511",
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2020-05-19",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2020-05-19T06:05:00+00:00",
+        "estimated": "2020-05-19T06:05:00+00:00",
+        "actual": "2020-05-19T05:59:00+00:00",
+        "estimated_runway": "2020-05-19T06:09:00+00:00",
+        "actual_runway": "2020-05-19T06:09:00+00:00"
+      },
+      "arrival": {
+        "airport": "Viracopos (Campinas International)",
+        "timezone": "America/Sao_Paulo",
+        "iata": "VCP",
+        "icao": "SBKP",
+        "terminal": "A",
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-19T07:20:00+00:00",
+        "estimated": "2020-05-19T07:20:00+00:00",
+        "actual": "2020-05-19T07:13:00+00:00",
+        "estimated_runway": "2020-05-19T07:06:00+00:00",
+        "actual_runway": "2020-05-19T07:06:00+00:00"
+      },
+      "airline": {
+        "name": "TAP Air Portugal",
+        "iata": "TP",
+        "icao": "TAP"
+      },
+      "flight": {
+        "number": "6135",
+        "iata": "TP6135",
+        "icao": "TAP6135",
+        "codeshared": {
+          "airline_name": "azul",
+          "airline_iata": "ad",
+          "airline_icao": "azu",
+          "flight_number": "4039",
+          "flight_iata": "ad4039",
+          "flight_icao": "azu4039"
+        }
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2020-05-19",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2020-05-19T06:05:00+00:00",
+        "estimated": "2020-05-19T06:05:00+00:00",
+        "actual": "2020-05-19T05:59:00+00:00",
+        "estimated_runway": "2020-05-19T06:09:00+00:00",
+        "actual_runway": "2020-05-19T06:09:00+00:00"
+      },
+      "arrival": {
+        "airport": "Viracopos (Campinas International)",
+        "timezone": "America/Sao_Paulo",
+        "iata": "VCP",
+        "icao": "SBKP",
+        "terminal": "A",
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-19T07:20:00+00:00",
+        "estimated": "2020-05-19T07:20:00+00:00",
+        "actual": "2020-05-19T07:13:00+00:00",
+        "estimated_runway": "2020-05-19T07:06:00+00:00",
+        "actual_runway": "2020-05-19T07:06:00+00:00"
+      },
+      "airline": {
+        "name": "Azul",
+        "iata": "AD",
+        "icao": "AZU"
+      },
+      "flight": {
+        "number": "4039",
+        "iata": "AD4039",
+        "icao": "AZU4039",
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2020-05-19",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2020-05-19T06:10:00+00:00",
+        "estimated": "2020-05-19T06:10:00+00:00",
+        "actual": "2020-05-19T06:08:00+00:00",
+        "estimated_runway": "2020-05-19T06:17:00+00:00",
+        "actual_runway": "2020-05-19T06:17:00+00:00"
+      },
+      "arrival": {
+        "airport": "Aeroporto Internacional Guarulhos",
+        "timezone": "America/Sao_Paulo",
+        "iata": "GRU",
+        "icao": "SBGR",
+        "terminal": "2",
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-19T07:30:00+00:00",
+        "estimated": "2020-05-19T07:30:00+00:00",
+        "actual": "2020-05-19T07:16:00+00:00",
+        "estimated_runway": "2020-05-19T07:08:00+00:00",
+        "actual_runway": "2020-05-19T07:08:00+00:00"
+      },
+      "airline": {
+        "name": "Gol",
+        "iata": "G3",
+        "icao": "GLO"
+      },
+      "flight": {
+        "number": "2743",
+        "iata": "G32743",
+        "icao": "GLO2743",
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2020-05-19",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": "1",
+        "gate": "8",
+        "delay": null,
+        "scheduled": "2020-05-19T19:55:00+00:00",
+        "estimated": "2020-05-19T19:55:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Aeroporto Internacional Guarulhos",
+        "timezone": "America/Sao_Paulo",
+        "iata": "GRU",
+        "icao": "SBGR",
+        "terminal": "2",
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-19T21:15:00+00:00",
+        "estimated": "2020-05-19T21:15:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "LATAM Airlines",
+        "iata": "LA",
+        "icao": "LAN"
+      },
+      "flight": {
+        "number": "3611",
+        "iata": "LA3611",
+        "icao": "LAN3611",
+        "codeshared": {
+          "airline_name": "latam airlines brasil",
+          "airline_iata": "jj",
+          "airline_icao": "tam",
+          "flight_number": "3611",
+          "flight_iata": "jj3611",
+          "flight_icao": "tam3611"
+        }
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2020-05-19",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": "1",
+        "gate": "8",
+        "delay": null,
+        "scheduled": "2020-05-19T19:55:00+00:00",
+        "estimated": "2020-05-19T19:55:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Aeroporto Internacional Guarulhos",
+        "timezone": "America/Sao_Paulo",
+        "iata": "GRU",
+        "icao": "SBGR",
+        "terminal": "2",
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-19T21:15:00+00:00",
+        "estimated": "2020-05-19T21:15:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "LATAM Airlines Brasil",
+        "iata": "JJ",
+        "icao": "TAM"
+      },
+      "flight": {
+        "number": "3611",
+        "iata": "JJ3611",
+        "icao": "TAM3611",
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2020-05-19",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2020-05-19T11:20:00+00:00",
+        "estimated": "2020-05-19T11:20:00+00:00",
+        "actual": "2020-05-19T11:09:00+00:00",
+        "estimated_runway": "2020-05-19T11:17:00+00:00",
+        "actual_runway": "2020-05-19T11:17:00+00:00"
+      },
+      "arrival": {
+        "airport": "Viracopos (Campinas International)",
+        "timezone": "America/Sao_Paulo",
+        "iata": "VCP",
+        "icao": "SBKP",
+        "terminal": "A",
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-19T12:40:00+00:00",
+        "estimated": "2020-05-19T12:40:00+00:00",
+        "actual": "2020-05-19T12:14:00+00:00",
+        "estimated_runway": "2020-05-19T12:09:00+00:00",
+        "actual_runway": "2020-05-19T12:09:00+00:00"
+      },
+      "airline": {
+        "name": "TAP Air Portugal",
+        "iata": "TP",
+        "icao": "TAP"
+      },
+      "flight": {
+        "number": "5137",
+        "iata": "TP5137",
+        "icao": "TAP5137",
+        "codeshared": {
+          "airline_name": "azul",
+          "airline_iata": "ad",
+          "airline_icao": "azu",
+          "flight_number": "2487",
+          "flight_iata": "ad2487",
+          "flight_icao": "azu2487"
+        }
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2020-05-19",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Hercilio Luz",
+        "timezone": "America/Sao_Paulo",
+        "iata": "FLN",
+        "icao": "SBFL",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2020-05-19T11:20:00+00:00",
+        "estimated": "2020-05-19T11:20:00+00:00",
+        "actual": "2020-05-19T11:09:00+00:00",
+        "estimated_runway": "2020-05-19T11:17:00+00:00",
+        "actual_runway": "2020-05-19T11:17:00+00:00"
+      },
+      "arrival": {
+        "airport": "Viracopos (Campinas International)",
+        "timezone": "America/Sao_Paulo",
+        "iata": "VCP",
+        "icao": "SBKP",
+        "terminal": "A",
+        "gate": null,
+        "baggage": null,
+        "delay": null,
+        "scheduled": "2020-05-19T12:40:00+00:00",
+        "estimated": "2020-05-19T12:40:00+00:00",
+        "actual": "2020-05-19T12:14:00+00:00",
+        "estimated_runway": "2020-05-19T12:09:00+00:00",
+        "actual_runway": "2020-05-19T12:09:00+00:00"
+      },
+      "airline": {
+        "name": "Azul",
+        "iata": "AD",
+        "icao": "AZU"
+      },
+      "flight": {
+        "number": "2487",
+        "iata": "AD2487",
+        "icao": "AZU2487",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "PR-YRZ",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "E494B4"
+      },
+      "live": null
+    }
+  ]
+}
