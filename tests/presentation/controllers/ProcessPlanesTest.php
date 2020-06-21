@@ -15,4 +15,10 @@ class ProcessPlanesTest extends TestCase {
     $this->expectExceptionMessage('Data param is required!');
     ProcessPlanes::handle('');
   }
+
+  public function testItWithInvalidDataType() {
+    $this->expectException(ProcessPlanesException::class);
+    $this->expectExceptionMessage('The param data needs to be a json!');
+    ProcessPlanes::handle('invalid_json');
+  }
 }
