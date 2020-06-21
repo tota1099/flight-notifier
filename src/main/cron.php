@@ -11,23 +11,15 @@ use App\domain\usecases\PlaneModel;
 use App\domain\usecases\Planes;
 use App\domain\usecases\Airport;
 use App\domain\usecases\PlaneTypes;
+use App\presentation\controllers\ProcessPlanes;
 
-$airport = new Airport([
-  'name' => 'Florianópolis',
-  'iata' => 'FLN'
-]);
-
-$plane = new PlaneModel([
-  'date' => '2020-05-21',
-  'timeScheduled' => '2020-05-21T19:55:00+00:00',
-  'timeEstimated' => '2020-05-21T19:55:00+00:00',
-  'airline' => 'LATAM',
-  'flightNumber' => 123456,
-  'type' => PlaneTypes::DEPARTURE,
-  'airport' => $airport
-]);
+$apiPlanes = file_get_contents("json_example.txt");
+$planesProcessed = ProcessPlanes::handle($apiPlanes);
 $planes = new Planes();
-$planes->offsetSet(1, $plane);
+foreach($planesProcessed as $k => $plane) {
+  $planes->offsetSet($k, $plane);
+}
+
 $request = new CurlRequest();
 $notifier = new TelegramNotifier($request);
 $notifyPlanes = new NotifyPlanes($notifier);

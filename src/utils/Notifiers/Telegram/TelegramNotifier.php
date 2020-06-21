@@ -19,11 +19,11 @@ class TelegramNotifier implements Notifier {
     public function notify(PlaneModel $plane): bool {
       $message = 'Vôo ' . $plane->flightNumber . ' da empresa ' . $plane->airline . ' vai ';
       if($plane->type == PlaneTypes::ARRIVAL) {
-        $message.= 'CHEGAR no aeroporto de ';
+        $message.= 'CHEGAR no aeroporto ';
       } else if ($plane->type == PlaneTypes::DEPARTURE) {
-        $message.= 'PARTIR do aeroporto de ';
+        $message.= 'PARTIR do aeroporto ';
       }
-      $message .= $plane->airport->name . ' ás ' . (new \DateTime($plane->timeScheduled))->format('d/m/Y H:i:s');
+      $message .= $plane->airport->name . ' ás ' . (new \DateTime($plane->timeScheduled))->format('H:i:s');
 
       $url = self::buildNotifyUrl($message);
       $this->requestService->get($url);
@@ -41,6 +41,6 @@ class TelegramNotifier implements Notifier {
 
       $chatId = 1209657923;    
       $botUrl = self::getBotUrl('1234038119:AAH6i-CRcHLJmBx2huUS0rH-XgsgT3Y7uH0');
-      return $botUrl . '/sendMessage?chat_id=' . $chatId . '&text=' . $message;
+      return $botUrl . '/sendMessage?chat_id=' . $chatId . '&text=' . urlencode($message);
     }
 }
