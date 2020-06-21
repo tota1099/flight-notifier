@@ -1,6 +1,6 @@
 <?php
 
-namespace App\modules\Notifiers\Exceptions;
+namespace App\utils\Notifiers\Telegram;
 
 use Exception;
 

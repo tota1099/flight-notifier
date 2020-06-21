@@ -1,6 +1,6 @@
 <?php
 
-namespace App\modules\Requests;
+namespace App\utils\Requests;
 
 interface RequestsInterface {
     
