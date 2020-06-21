@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Notifiers;
+namespace App\modules\Notifiers;
 
-use App\Validations\Notifiers\TelegramNotifierValidation;
-use Constants\Telegram;
+use App\modules\Notifiers\Validations\TelegramNotifierValidation;
+use App\modules\Notifiers\Constants\Telegram;
+use App\modules\Requests\RequestsInterface;
 
 class TelegramNotifier implements NotifierInterface {
 
@@ -27,10 +28,12 @@ class TelegramNotifier implements NotifierInterface {
         return $this->botToken;
     }
 
-    public function notify($message = ''): bool
+    public function notify(RequestsInterface $requestService, $message = ''): bool
     {
         TelegramNotifierValidation::messageIsValid($message);
         $notifyUrl = Telegram::buildNotifyUrl($this->botToken, $this->chatId, $message);
+        $requestService->get($notifyUrl);
+        return true;
     }
 }
 

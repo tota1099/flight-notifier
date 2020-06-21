@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Validations\Notifiers;
+namespace App\modules\Notifiers\Validations;
 
-use App\Exceptions\Notifiers\TelegramNotifierException;
+use App\modules\Notifiers\Exceptions\TelegramNotifierException;
 
 class TelegramNotifierValidation {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Constants;
+namespace App\modules\Notifiers\Constants;
 
 class Telegram {
     const API_BASE_URL = 'https://api.telegram.org';

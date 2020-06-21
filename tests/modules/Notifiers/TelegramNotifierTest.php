@@ -1,10 +1,13 @@
 <?php
 
-require_once dirname(__DIR__) . '/vendor/autoload.php';
+namespace Tests\modules\Notifiers;
 
-use App\Exceptions\Notifiers\TelegramNotifierException;
+require_once dirname(__DIR__) . '/../../vendor/autoload.php';
+
+use App\modules\Notifiers\Exceptions\TelegramNotifierException;
 use PHPUnit\Framework\TestCase;
-use App\Notifiers\TelegramNotifier;
+use App\modules\Notifiers\TelegramNotifier;
+use App\modules\Requests\CurlRequest;
 
 class TelegramNotifierTest extends TestCase {
 
@@ -39,7 +42,7 @@ class TelegramNotifierTest extends TestCase {
         $this->expectException(TelegramNotifierException::class);
         $this->expectExceptionMessage('Message should be a String!');
 
-        $notifier->notify(0);
+        $notifier->notify(new CurlRequest(), 0);
     }
 
     function testNotifyWithEmptyMessage() {
@@ -47,6 +50,6 @@ class TelegramNotifierTest extends TestCase {
         $this->expectException(TelegramNotifierException::class);
         $this->expectExceptionMessage('Message should\'t be empty!');
 
-        $notifier->notify('');
+        $notifier->notify(new CurlRequest(), '');
     }
 }

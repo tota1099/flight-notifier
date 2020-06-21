@@ -1,6 +1,3 @@
-// 20200520204831
-// http://api.aviationstack.com/v1/flights?access_key=f7ee848f3cbbc79fefc77675178c362e&dep_iata=FLN
-
 {
   "pagination": {
     "limit": 100,

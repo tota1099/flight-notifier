@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Exceptions\Notifiers;
+namespace App\modules\Notifiers\Exceptions;
 
 use Exception;
 
