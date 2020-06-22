@@ -23,13 +23,30 @@ class ProcessPlanes {
 
     $dataToJson = json_decode($data, true);
     $planes = $dataToJson['data'];
-    return array_map(fn($plane) => self::processPlane($plane) ,$planes);
+    $planesToNotify = [];
+    foreach($planes as $plane) {
+      $planeProcessed = self::processPlane($plane);
+      if($planeProcessed) {
+        $planesToNotify[] = $planeProcessed;
+      }
+    }
+    return $planesToNotify;
   }
 
-  public static function processPlane($plane) {  
+  public static function processPlane($plane) {
+    $alertInSeconds = self::$alertMinutes * 60;
+
     $planeType = PlaneTypes::ARRIVAL;
     if($plane['departure']['iata'] == self::$airportTargetIata ) {
       $planeType = PlaneTypes::DEPARTURE;
+    }
+
+    $datetimePlane = strtotime((new \DateTime($plane[$planeType]['scheduled']))->format('H:i:s'));
+    $datetimeNow = strtotime(date('Y-m-d H:i:s'));
+    $dateDiffSeconds = $datetimeNow - $datetimePlane;
+
+    if($dateDiffSeconds < 0 || $dateDiffSeconds > $alertInSeconds) {
+      return false;
     }
 
     $airport = new Airport([

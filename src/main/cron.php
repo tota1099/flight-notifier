@@ -15,12 +15,15 @@ use App\presentation\controllers\ProcessPlanes;
 
 $apiPlanes = file_get_contents("json_example.txt");
 $planesProcessed = ProcessPlanes::handle($apiPlanes);
-$planes = new Planes();
-foreach($planesProcessed as $k => $plane) {
-  $planes->offsetSet($k, $plane);
-}
 
-$request = new CurlRequest();
-$notifier = new TelegramNotifier($request);
-$notifyPlanes = new NotifyPlanes($notifier);
-$notifyPlanes->handle($planes);
+if(!empty($planesProcessed)) {
+  $planes = new Planes();
+  foreach($planesProcessed as $k => $plane) {
+    $planes->offsetSet($k, $plane);
+  }
+
+  $request = new CurlRequest();
+  $notifier = new TelegramNotifier($request);
+  $notifyPlanes = new NotifyPlanes($notifier);
+  $notifyPlanes->handle($planes);
+}
