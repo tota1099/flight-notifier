@@ -6,14 +6,19 @@ use App\domain\usecases\PlaneModel;
 use App\domain\usecases\PlaneTypes;
 use App\presentation\interfaces\Notifier;
 use App\utils\Requests\RequestsInterface;
+use phpDocumentor\Reflection\Types\Integer;
 
 class TelegramNotifier implements Notifier {
     
     const API_BASE_URL = 'https://api.telegram.org';
     private RequestsInterface $requestService;
+    private Integer $chatId;
+    private String $botToken;
 
-    public function __construct(RequestsInterface $requestService) {
+    public function __construct(RequestsInterface $requestService, Integer $chatId, String $botToken) {
         $this->requestService = $requestService;
+        $this->chatId = $chatId;
+        $this->botToken = $botToken;
     }
 
     public function notify(PlaneModel $plane): bool {
@@ -30,8 +35,8 @@ class TelegramNotifier implements Notifier {
       return true;
     }
 
-    private static function getBotUrl($botToken = '') {
-        return self::API_BASE_URL . '/bot' . $botToken;
+    private static function getBotUrl() {
+        return self::API_BASE_URL . '/bot' . self::$botToken;
     }
 
     public static function buildNotifyUrl($message = ''){
@@ -39,8 +44,7 @@ class TelegramNotifier implements Notifier {
         throw new TelegramNotifierException('Message param is required!', 400);
       }
 
-      $chatId = 1209657923;    
-      $botUrl = self::getBotUrl('1234038119:AAH6i-CRcHLJmBx2huUS0rH-XgsgT3Y7uH0');
-      return $botUrl . '/sendMessage?chat_id=' . $chatId . '&text=' . urlencode($message);
+      $botUrl = self::getBotUrl();
+      return $botUrl . '/sendMessage?chat_id=' . self::$chatId . '&text=' . urlencode($message);
     }
 }
