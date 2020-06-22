@@ -1,7 +1,6 @@
 <?php
 
 namespace App\presentation\controllers;
-use App\presentation\interfaces\Controller;
 use App\presentation\interfaces\Notifier;
 use App\domain\usecases\Planes;
 

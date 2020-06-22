@@ -49,10 +49,7 @@ class ProcessPlanes {
       return false;
     }
 
-    $airport = new Airport([
-      'name' => $plane[$planeType]['airport'],
-      'iata' => $plane[$planeType]['iata']
-    ]);
+    $airport = new Airport($plane[$planeType]['airport'], $plane[$planeType]['iata']);
 
     return new PlaneModel([
       'date' => $plane['flight_date'],
