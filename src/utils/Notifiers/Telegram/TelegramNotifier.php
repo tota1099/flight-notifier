@@ -6,16 +6,15 @@ use App\domain\usecases\PlaneModel;
 use App\domain\usecases\PlaneTypes;
 use App\presentation\interfaces\Notifier;
 use App\utils\Requests\RequestsInterface;
-use phpDocumentor\Reflection\Types\Integer;
 
 class TelegramNotifier implements Notifier {
     
     const API_BASE_URL = 'https://api.telegram.org';
     private RequestsInterface $requestService;
-    private Integer $chatId;
+    private Int $chatId;
     private String $botToken;
 
-    public function __construct(RequestsInterface $requestService, Integer $chatId, String $botToken) {
+    public function __construct(RequestsInterface $requestService, Int $chatId, String $botToken) {
         $this->requestService = $requestService;
         $this->chatId = $chatId;
         $this->botToken = $botToken;
