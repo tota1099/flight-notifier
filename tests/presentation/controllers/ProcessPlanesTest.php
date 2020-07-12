@@ -2,8 +2,6 @@
 
 namespace Tests\utils\Notifiers\Telegram;
 
-require_once dirname(__DIR__) . '/../../vendor/autoload.php';
-
 use PHPUnit\Framework\TestCase;
 use App\presentation\controllers\ProcessPlanes;
 use App\presentation\exceptions\ProcessPlanesException;
