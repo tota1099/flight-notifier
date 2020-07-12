@@ -1,10 +1,11 @@
 <?php
 
 namespace App\utils\Requests;
+use App\presentation\interfaces\RequestsInterface;
 
 class CurlRequest implements RequestsInterface {
 
-    public function get(String $url = '') : bool {
+    public function get(String $url) : bool {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);

@@ -1,13 +1,13 @@
 <?php
 
-namespace App\utils\Notifiers\Telegram;
+namespace App\utils\Notifiers;
 
 use App\domain\usecases\PlaneModel;
 use App\domain\usecases\PlaneTypes;
 use App\presentation\interfaces\Notifier;
 use App\utils\Requests\RequestsInterface;
 
-class TelegramNotifier implements Notifier {
+class TelegramNotifierAdapter implements Notifier {
     
     const API_BASE_URL = 'https://api.telegram.org';
     private RequestsInterface $requestService;
@@ -40,7 +40,7 @@ class TelegramNotifier implements Notifier {
 
     public static function buildNotifyUrl($message = ''){
       if(empty($message)) {
-        throw new TelegramNotifierException('Message param is required!', 400);
+        throw new TelegramNotifierAdapterException('Message param is required!', 400);
       }
 
       $botUrl = self::getBotUrl();
