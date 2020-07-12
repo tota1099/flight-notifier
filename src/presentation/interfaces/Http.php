@@ -7,6 +7,6 @@ interface HttpRequest {
 }
 
 interface HttpResponse {
-  public function getBody(): String;
+  public function getBody(): ?string;
   public function getCode(): Int;
 }
