@@ -2,7 +2,7 @@
 
 namespace App\presentation\interfaces;
 
-interface RequestsInterface {
+interface Requests {
     
     public function get(String $url) : bool;
 }

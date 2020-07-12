@@ -3,7 +3,7 @@
 namespace App\main\factories;
 
 use App\presentation\interfaces\Notifier;
-use App\utils\Notifiers\Telegram\TelegramNotifierAdapter;
+use App\utils\Notifiers\TelegramNotifierAdapter;
 
 class NotifierFactory {
   public static function createNotifier(): Notifier

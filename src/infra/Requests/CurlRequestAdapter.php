@@ -1,9 +1,10 @@
 <?php
 
-namespace App\utils\Requests;
-use App\presentation\interfaces\RequestsInterface;
+namespace App\infra\Requests;
 
-class CurlRequest implements RequestsInterface {
+use App\presentation\interfaces\Requests;
+
+class CurlRequestAdapter implements Requests {
 
     public function get(String $url) : bool {
         $ch = curl_init();

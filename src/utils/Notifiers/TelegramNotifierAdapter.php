@@ -5,16 +5,16 @@ namespace App\utils\Notifiers;
 use App\domain\usecases\PlaneModel;
 use App\domain\usecases\PlaneTypes;
 use App\presentation\interfaces\Notifier;
-use App\utils\Requests\RequestsInterface;
+use App\presentation\interfaces\Requests;
 
 class TelegramNotifierAdapter implements Notifier {
     
     const API_BASE_URL = 'https://api.telegram.org';
-    private RequestsInterface $requestService;
+    private Requests $requestService;
     private Int $chatId;
     private String $botToken;
 
-    public function __construct(RequestsInterface $requestService, Int $chatId, String $botToken) {
+    public function __construct(Requests $requestService, Int $chatId, String $botToken) {
         $this->requestService = $requestService;
         $this->chatId = $chatId;
         $this->botToken = $botToken;
@@ -29,21 +29,21 @@ class TelegramNotifierAdapter implements Notifier {
       }
       $message .= $plane->airport->name . ' ás ' . (new \DateTime($plane->timeScheduled))->format('H:i:s');
 
-      $url = self::buildNotifyUrl($message);
+      $url = $this->buildNotifyUrl($message);
       $this->requestService->get($url);
       return true;
     }
 
-    private static function getBotUrl() {
-        return self::API_BASE_URL . '/bot' . self::$botToken;
+    private function getBotUrl() {
+        return self::API_BASE_URL . '/bot' . $this->botToken;
     }
 
-    public static function buildNotifyUrl($message = ''){
+    public function buildNotifyUrl($message = ''){
       if(empty($message)) {
         throw new TelegramNotifierAdapterException('Message param is required!', 400);
       }
 
-      $botUrl = self::getBotUrl();
-      return $botUrl . '/sendMessage?chat_id=' . self::$chatId . '&text=' . urlencode($message);
+      $botUrl = $this->getBotUrl();
+      return $botUrl . '/sendMessage?chat_id=' . $this->chatId . '&text=' . urlencode($message);
     }
 }

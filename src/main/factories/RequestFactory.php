@@ -2,12 +2,12 @@
 
 namespace App\main\factories;
 
-use App\utils\Requests\CurlRequest;
-use App\utils\Requests\RequestsInterface;
+use App\infra\Requests\CurlRequestAdapter;
+use App\presentation\interfaces\Requests;
 
 class RequestFactory {
-  public static function createRequest(): RequestsInterface
+  public static function createRequest(): Requests
   {
-    return new CurlRequest();
+    return new CurlRequestAdapter();
   }
 }
