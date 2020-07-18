@@ -2,8 +2,6 @@
 
 namespace App\utils\Notifiers;
 
-use App\domain\usecases\PlaneModel;
-use App\domain\usecases\PlaneTypes;
 use App\presentation\interfaces\Notifier;
 use App\presentation\interfaces\Requests;
 
@@ -20,16 +18,9 @@ class TelegramNotifierAdapter implements Notifier {
         $this->botToken = $botToken;
     }
 
-    public function notify(PlaneModel $plane): bool {
-      $message = 'Vôo ' . $plane->flightNumber . ' da empresa ' . $plane->airline . ' vai ';
-      if($plane->type == PlaneTypes::ARRIVAL) {
-        $message.= 'CHEGAR no aeroporto ';
-      } else if ($plane->type == PlaneTypes::DEPARTURE) {
-        $message.= 'PARTIR do aeroporto ';
-      }
-      $message .= $plane->airport->name . ' ás ' . (new \DateTime($plane->timeScheduled))->format('H:i:s');
-
+    public function notify(String $message): bool {
       $url = $this->buildNotifyUrl($message);
+      echo $url;
       $this->requestService->get($url);
       return true;
     }
