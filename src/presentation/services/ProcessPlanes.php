@@ -1,9 +1,10 @@
 <?php
 
-namespace App\presentation\controllers;
+namespace App\presentation\services;
 
 use App\domain\usecases\Airport;
 use App\domain\usecases\PlaneModel;
+use App\domain\usecases\Planes;
 use App\domain\usecases\PlaneTypes;
 use App\presentation\exceptions\ProcessPlanesException;
 use App\presentation\helpers\Helper;
@@ -23,11 +24,11 @@ class ProcessPlanes {
 
     $dataToJson = json_decode($data, true);
     $planes = $dataToJson['data'];
-    $planesToNotify = [];
-    foreach($planes as $plane) {
+    $planesToNotify = new Planes();
+    foreach($planes as $key => $plane) {
       $planeProcessed = self::processPlane($plane);
       if($planeProcessed) {
-        $planesToNotify[] = $planeProcessed;
+        $planesToNotify->offsetSet($key, $planeProcessed);
       }
     }
     return $planesToNotify;

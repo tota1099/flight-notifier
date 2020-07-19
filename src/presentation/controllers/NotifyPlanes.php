@@ -3,6 +3,7 @@
 namespace App\presentation\controllers;
 use App\presentation\interfaces\Notifier;
 use App\domain\usecases\Planes;
+use App\presentation\services\PlaneMessage;
 
 class NotifyPlanes {
 
@@ -15,7 +16,8 @@ class NotifyPlanes {
 
   public function handle(Planes $planes) {
     foreach($planes as $plane) {
-      $this->notifier->notify($plane);
+      $message = PlaneMessage::handle($plane);
+      $this->notifier->notify($message);
     }
   }
 }

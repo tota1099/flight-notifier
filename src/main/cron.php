@@ -2,28 +2,20 @@
 
 namespace App\main;
 
-$raizFolder = __DIR__ . '/../..';
+require_once('vendor/autoload.php');
 
-require_once($raizFolder . '/vendor/autoload.php');
-
+use App\config\Config;
 use App\presentation\controllers\NotifyPlanes;
-use App\domain\usecases\Planes;
-use App\presentation\controllers\ProcessPlanes;
-use Dotenv\Dotenv;
+use App\presentation\services\ProcessPlanes;
 use App\main\factories\NotifierFactory;
 
-$dotenv = Dotenv::createImmutable($raizFolder);
-$dotenv->load();
+Config::init();
 
-$apiPlanes = file_get_contents("json_example.txt");
+$apiPlanes = file_get_contents("data/planes.txt");
 $planesProcessed = ProcessPlanes::handle($apiPlanes);
 
 if(!empty($planesProcessed)) {
-  $planes = new Planes();
-  foreach($planesProcessed as $k => $plane) {
-    $planes->offsetSet($k, $plane);
-  }
   $notifier = NotifierFactory::createNotifier();
   $notifyPlanes = new NotifyPlanes($notifier);
-  $notifyPlanes->handle($planes);
+  $notifyPlanes->handle($planesProcessed);
 }
