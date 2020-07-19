@@ -20,7 +20,6 @@ class TelegramNotifierAdapter implements Notifier {
 
     public function notify(String $message): bool {
       $url = $this->buildNotifyUrl($message);
-      echo $url;
       $this->requestService->get($url);
       return true;
     }
