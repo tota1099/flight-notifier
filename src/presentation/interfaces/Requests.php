@@ -4,6 +4,6 @@ namespace App\presentation\interfaces;
 
 interface Requests {
     
-    public function get(String $url) : bool;
+    public function get(String $url) : string;
 }
 

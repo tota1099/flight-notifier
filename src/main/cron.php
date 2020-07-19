@@ -11,7 +11,7 @@ use App\main\factories\NotifierFactory;
 
 Config::init();
 
-$apiPlanes = file_get_contents("data/planes.txt");
+$apiPlanes = file_get_contents("data/planes.json");
 $planesProcessed = ProcessPlanes::handle($apiPlanes);
 
 if(!empty($planesProcessed)) {
