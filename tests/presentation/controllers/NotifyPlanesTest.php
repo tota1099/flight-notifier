@@ -9,7 +9,7 @@ use App\domain\usecases\PlaneTypes;
 use PHPUnit\Framework\TestCase;
 use App\presentation\controllers\NotifyPlanes;
 use App\presentation\interfaces\Notifier;
-use App\presentation\services\PlaneMessage;
+use App\presentation\interfaces\PlaneMessage;
 
 class NotifyPlanesTest extends TestCase {
 
@@ -28,12 +28,23 @@ class NotifyPlanesTest extends TestCase {
     ));
 
     $notifierMock = $this->prophesize(Notifier::class);
-    $message = PlaneMessage::handle($planes[0]);
+    $planeMessageMock = $this->prophesize(PlaneMessage::class);
+
+    $message = 'This is a example message!';
+    $planeMessageMock
+      ->handle($planes[0])
+      ->shouldBeCalledTimes(1)
+      ->willReturn($message);
+
     $notifierMock
       ->notify($message)
       ->shouldBeCalledTimes(1)
       ->willReturn(true);
-    $notifyPlanes = new NotifyPlanes($notifierMock->reveal());
+
+    $notifyPlanes = new NotifyPlanes(
+      $notifierMock->reveal(),
+      $planeMessageMock->reveal(),
+    );
     $notifyPlanes->handle($planes);    
   }
 }
