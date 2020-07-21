@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\utils\Notifiers\Telegram;
+namespace Tests\presentation\services;
 
 use PHPUnit\Framework\TestCase;
 use App\presentation\services\ProcessPlanes;
