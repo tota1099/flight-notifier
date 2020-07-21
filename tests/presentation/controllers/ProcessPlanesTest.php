@@ -3,7 +3,7 @@
 namespace Tests\utils\Notifiers\Telegram;
 
 use PHPUnit\Framework\TestCase;
-use App\presentation\controllers\ProcessPlanes;
+use App\presentation\services\ProcessPlanes;
 use App\presentation\exceptions\ProcessPlanesException;
 
 class ProcessPlanesTest extends TestCase {

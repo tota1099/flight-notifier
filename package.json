@@ -1,6 +1,7 @@
 {
   "scripts": {
     "test": "vendor/bin/phpunit tests --color",
+    "test:html": "vendor/bin/phpunit --coverage-html report",
     "test:watch": "watch 'npm run --silent test' ."
   }
 }

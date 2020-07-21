@@ -2,5 +2,5 @@ vendor/
 composer.phar
 node_modules/
 .env
-tests/report/
+report/
 data
