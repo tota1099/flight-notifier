@@ -2,7 +2,6 @@
 
 namespace App\presentation\controllers;
 
-use App\domain\usecases\PlaneModel;
 use App\presentation\interfaces\Notifier;
 use App\domain\usecases\Planes;
 use App\presentation\interfaces\PlaneMessage;

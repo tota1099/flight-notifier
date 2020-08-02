@@ -9,11 +9,12 @@ use App\presentation\controllers\NotifyPlanes;
 use App\presentation\services\ProcessPlanes;
 use App\main\factories\NotifierFactory;
 use App\presentation\services\PlaneMessage;
+use App\presentation\helpers\TimeHelper;
 
 Config::init();
 
 $apiPlanes = file_get_contents("data/planes.txt");
-$planesProcessed = ProcessPlanes::handle($apiPlanes);
+$planesProcessed = ( new ProcessPlanes(new TimeHelper(), $_ENV['NOTIFICATION_MINUTES'], $_ENV['AIRPORT']))->handle($apiPlanes);
 $planeMessage = new PlaneMessage();
 
 if(!empty($planesProcessed)) {

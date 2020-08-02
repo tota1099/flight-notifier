@@ -8,13 +8,22 @@ use App\domain\usecases\Planes;
 use App\domain\usecases\PlaneTypes;
 use App\presentation\exceptions\ProcessPlanesException;
 use App\presentation\helpers\Helper;
+use App\presentation\interfaces\Time;
 
 class ProcessPlanes {
 
-  private static int $alertMinutes = 15;
-  private static string $airportTargetIata = 'FLN';
+  private Time $timeService;
+  private int $alertMinutes;
+  private String $airportTargetIata;
 
-  public static function handle(String $data) {
+  public function __construct(Time $timeService, int $alertMinutes, String $airportTargetIata)
+  {
+    $this->timeService = $timeService;
+    $this->alertMinutes = $alertMinutes;
+    $this->airportTargetIata = $airportTargetIata;
+  }
+
+  public function handle(String $data) {
     if(empty($data)) {
       throw new ProcessPlanesException('Data param is required!');
     }
@@ -26,29 +35,20 @@ class ProcessPlanes {
     $planes = $dataToJson['data'];
     $planesToNotify = new Planes();
     foreach($planes as $key => $plane) {
-      $planeProcessed = self::processPlane($plane);
-      if($planeProcessed) {
+      $planeType = PlaneTypes::ARRIVAL;
+      if($plane['departure']['iata'] == $this->airportTargetIata ) {
+        $planeType = PlaneTypes::DEPARTURE;
+      }
+      
+      if($this->alertMinutes === $this->timeService->getDiffInMinutes($this->timeService->convertRFC3339ToDatetime($plane[$planeType]['scheduled']), $this->timeService->now())) {
+        $planeProcessed = $this->processPlane($plane, $planeType);
         $planesToNotify->offsetSet($key, $planeProcessed);
       }
     }
     return $planesToNotify;
   }
 
-  public static function processPlane($plane) {
-    $alertInSeconds = self::$alertMinutes * 60;
-
-    $planeType = PlaneTypes::ARRIVAL;
-    if($plane['departure']['iata'] == self::$airportTargetIata ) {
-      $planeType = PlaneTypes::DEPARTURE;
-    }
-
-    $datetimePlane = strtotime((new \DateTime($plane[$planeType]['scheduled']))->format('H:i:s'));
-    $datetimeNow = strtotime(date('Y-m-d H:i:s'));
-    $dateDiffSeconds = $datetimeNow - $datetimePlane;
-
-    if($dateDiffSeconds < 0 || $dateDiffSeconds > $alertInSeconds) {
-      return false;
-    }
+  public function processPlane($plane, $planeType) {
 
     $airport = new Airport($plane[$planeType]['airport'], $plane[$planeType]['iata']);
 

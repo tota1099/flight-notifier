@@ -18,12 +18,12 @@ class NotifyPlanesTest extends TestCase {
     $planes->offsetSet(0, new PlaneModel(
       [
         'date' => '2020-07-19',
-        'timeScheduled' => '2020-07-19T09:00:00+00:00',
-        'timeEstimated' => '2020-07-19T10:00:00+00:00',
-        'airline' => 'Airline A',
-        'flightNumber' => 123,
-        'type' => PlaneTypes::ARRIVAL,
-        'airport' => new Airport('Guarulhos', 'GRU')
+        'timeScheduled' => '2020-07-19T20:10:00+00:00',
+        'timeEstimated' => '2020-07-19T20:15:00+00:00',
+        'airline' => 'Lufthansa',
+        'flightNumber' => 4689,
+        'type' => PlaneTypes::DEPARTURE,
+        'airport' => new Airport('Aeroporto Internacional Guarulhos', 'GRU')
       ]
     ));
 
