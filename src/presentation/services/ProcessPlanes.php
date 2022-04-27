@@ -40,7 +40,9 @@ class ProcessPlanes {
         $planeType = PlaneTypes::DEPARTURE;
       }
       
-      if($this->alertMinutes === $this->timeService->getDiffInMinutes($this->timeService->convertRFC3339ToDatetime($plane[$planeType]['scheduled']), $this->timeService->now())) {
+      $diffMinutes = $this->timeService->getDiffInMinutes($this->timeService->convertRFC3339ToDatetime($plane[$planeType]['scheduled']), $this->timeService->now());
+
+      if($diffMinutes > 0 && $this->alertMinutes >= $diffMinutes) {
         $planeProcessed = $this->processPlane($plane, $planeType);
         $planesToNotify->offsetSet($key, $planeProcessed);
       }

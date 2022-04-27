@@ -13,8 +13,10 @@ use App\presentation\helpers\TimeHelper;
 
 Config::init();
 
+$timeNotification = $_ENV['NOTIFICATION_MINUTES'];
+$airport = $_ENV['AIRPORT']; 
 $apiPlanes = file_get_contents("data/planes.txt");
-$planesProcessed = ( new ProcessPlanes(new TimeHelper(), $_ENV['NOTIFICATION_MINUTES'], $_ENV['AIRPORT']))->handle($apiPlanes);
+$planesProcessed = ( new ProcessPlanes(new TimeHelper(), $timeNotification, $airport))->handle($apiPlanes);
 $planeMessage = new PlaneMessage();
 
 if(!empty($planesProcessed)) {
