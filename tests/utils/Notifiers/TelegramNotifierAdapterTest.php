@@ -4,13 +4,13 @@ namespace Tests\utils\Notifiers;
 
 use App\presentation\interfaces\Requests;
 use PHPUnit\Framework\TestCase;
-use App\utils\Notifiers\TelegramNotifierAdapterException;
+use App\utils\Notifiers\NotifierAdapterException;
 use App\utils\Notifiers\TelegramNotifierAdapter;
 
 class TelegramNotifierAdapterTest extends TestCase {
 
   public function testItWithEmptyMessage() {
-    $this->expectException(TelegramNotifierAdapterException::class);
+    $this->expectException(NotifierAdapterException::class);
     $this->expectExceptionMessage('Message param is required!');
 
     $chatId = 123;
