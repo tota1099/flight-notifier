@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/tota1099/flight-notifier/badge.svg?branch=master)](https://coveralls.io/github/tota1099/flight-notifier?branch=master)
+
 # Flight Notifier
 
 A project to study about Clean Architecture and Clean Code.
