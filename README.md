@@ -7,8 +7,8 @@ A project to study about Clean Architecture and Clean Code.
 
 ```bash
 docker run -v "$PWD":/app composer composer install --ignore-platform-reqs
-docker run -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.4-cli  php src/main/getDataApi.php
-docker run -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.4-cli php src/main/cron.php
+docker run -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:8.0-cli  php src/main/getDataApi.php
+docker run -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:8.0-cli php src/main/cron.php
 ```
 
 ## Tests
