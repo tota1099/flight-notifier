@@ -27,23 +27,25 @@ class NotifyFlightsTest extends TestCase {
       ]
     ));
 
-    $notifierMock = $this->prophesize(Notifier::class);
-    $flightsMessageMock = $this->prophesize(FlightMessage::class);
+    $notifierMock = $this->createMock(Notifier::class);
+    $flightsMessageMock = $this->createMock(FlightMessage::class);
 
     $message = 'This is a example message!';
     $flightsMessageMock
-      ->handle($flights[0])
-      ->shouldBeCalledTimes(1)
+      ->expects($this->once())
+      ->method('handle')
+      ->with($flights[0])
       ->willReturn($message);
 
     $notifierMock
-      ->notify($message)
-      ->shouldBeCalledTimes(1)
+      ->expects($this->once())
+      ->method('notify')
+      ->with($message)
       ->willReturn(true);
 
     $notifyFlights = new NotifyFlights(
-      $notifierMock->reveal(),
-      $flightsMessageMock->reveal(),
+      $notifierMock,
+      $flightsMessageMock,
     );
     $notifyFlights->handle($flights);    
   }
