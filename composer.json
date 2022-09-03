@@ -24,6 +24,7 @@
         "fzaninotto/faker": "^1.9"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6"
+        "phpunit/phpunit": "^6",
+        "php-coveralls/php-coveralls": "^5.2"
     }
 }
