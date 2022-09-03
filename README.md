@@ -14,5 +14,5 @@ docker run -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.4-cli php src/main/c
 ## Tests
 
 ```bash
-docker run -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.4-cli php vendor/bin/phpunit tests --color
+docker run -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.4-cli php vendor/bin/phpunit tests --testdox
 ```
