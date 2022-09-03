@@ -17,6 +17,6 @@ $request = RequestFactory::createRequest();
 $apiData = $request->get($apiUrl);
 
 $json = json_decode($apiData);
-$fp = fopen('data/planes.txt', 'w');
+$fp = fopen('data/flights.txt', 'w');
 fwrite($fp, json_encode($json, JSON_PRETTY_PRINT));
 fclose($fp);

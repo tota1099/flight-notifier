@@ -5,22 +5,22 @@ namespace App\main;
 require_once('vendor/autoload.php');
 
 use App\config\Config;
-use App\presentation\controllers\NotifyPlanes;
-use App\presentation\services\ProcessPlanes;
+use App\presentation\controllers\NotifyFlights;
+use App\presentation\services\ProcessFlights;
 use App\main\factories\NotifierFactory;
-use App\presentation\services\PlaneMessage;
+use App\presentation\services\FlightMessage;
 use App\presentation\helpers\TimeHelper;
 
 Config::init();
 
 $timeNotification = $_ENV['NOTIFICATION_MINUTES'];
 $airport = $_ENV['AIRPORT']; 
-$apiPlanes = file_get_contents("data/planes.txt");
-$planesProcessed = ( new ProcessPlanes(new TimeHelper(), $timeNotification, $airport))->handle($apiPlanes);
-$planeMessage = new PlaneMessage();
+$apiFlights = file_get_contents("data/flights.txt");
+$flightsProcessed = ( new ProcessFlights(new TimeHelper(), $timeNotification, $airport))->handle($apiFlights);
+$flightMessage = new FlightMessage();
 
-if(!empty($planesProcessed)) {
+if(!empty($flightsProcessed)) {
   $notifier = NotifierFactory::createNotifier();
-  $notifyPlanes = new NotifyPlanes($notifier, $planeMessage);
-  $notifyPlanes->handle($planesProcessed);
+  $notifyFlights = new NotifyFlights($notifier, $flightMessage);
+  $notifyFlights->handle($flightsProcessed);
 }
