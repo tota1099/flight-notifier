@@ -16,7 +16,14 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: 7.4
+        php-version: 8.0
+
+    - name: Add PHP repository
+      run: sudo add-apt-repository ppa:ondrej/php
+    - name: Update apt
+      run: sudo apt update
+    - name: Install xdebug
+      run: sudo apt install php8.0-xdebug
 
     - name: Cache Composer packages
       id: composer-cache
