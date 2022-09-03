@@ -2,7 +2,7 @@
 
 namespace App\domain\usecases;
 
-class PlaneTypes
+class FlightTypes
 {
   const DEPARTURE = 'departure';
   const ARRIVAL = 'arrival';
