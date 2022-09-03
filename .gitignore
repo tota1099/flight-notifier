@@ -4,3 +4,4 @@ node_modules/
 .env
 report/
 data
+.phpunit.result.cache
