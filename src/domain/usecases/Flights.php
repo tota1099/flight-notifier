@@ -2,12 +2,12 @@
 
 namespace App\domain\usecases;
 
-class Planes extends \ArrayObject {
+class Flights extends \ArrayObject {
   public function offsetSet($index, $newval)
   {
-    if($newval instanceof PlaneModel) {
+    if($newval instanceof FlightModel) {
       return parent::offsetSet($index, $newval);
     }
-    throw new \InvalidArgumentException('Value must be a Plane');
+    throw new \InvalidArgumentException('Value must be a Flight');
   }
 }

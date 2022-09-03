@@ -15,8 +15,8 @@ class TelegramNotifierAdapterTest extends TestCase {
 
     $chatId = 123;
     $botToken = '321';
-    $requestMock = $this->prophesize(Requests::class);
-    $notifier = new TelegramNotifierAdapter($requestMock->reveal(), $chatId, $botToken);
+    $requestMock = $this->createMock(Requests::class);
+    $notifier = new TelegramNotifierAdapter($requestMock, $chatId, $botToken);
     
     $notifier->notify('');
   }
@@ -24,10 +24,14 @@ class TelegramNotifierAdapterTest extends TestCase {
   public function testItWithCorrectMessage() {
     $chatId = 123;
     $botToken = '321';
-    $requestMock = $this->prophesize(Requests::class);
-    $requestMock->get('https://api.telegram.org/bot321/sendMessage?chat_id=123&text=Hello+World')->willReturn(true);
+    $requestMock = $this->createMock(Requests::class);
+    $requestMock
+      ->expects($this->once())
+      ->method('get')
+      ->with('https://api.telegram.org/bot321/sendMessage?chat_id=123&text=Hello+World')
+      ->willReturn('any');
 
-    $notifier = new TelegramNotifierAdapter($requestMock->reveal(), $chatId, $botToken);
+    $notifier = new TelegramNotifierAdapter($requestMock, $chatId, $botToken);
     $this->assertEquals(true, $notifier->notify('Hello World'));
   }
 }
