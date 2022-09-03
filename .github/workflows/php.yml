@@ -45,5 +45,7 @@ jobs:
       env:
         COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
       run: |
+        echo ${{ secrets.COVERALLS_REPO_TOKEN }}
+        echo "aa"
         composer global require php-coveralls/php-coveralls
         php-coveralls --coverage_clover=build/logs/clover.xml -v
