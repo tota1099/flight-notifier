@@ -34,7 +34,7 @@ docker run -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:8.1-cli php vendor/bin
 
 This script get the flights from current day and save in the database.
 
-### cron.php
+#### cron.php
 
 This script notifies you about the flights.
 
