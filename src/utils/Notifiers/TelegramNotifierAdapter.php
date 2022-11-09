@@ -30,7 +30,7 @@ class TelegramNotifierAdapter implements Notifier {
 
     public function buildNotifyUrl($message = ''){
       if(empty($message)) {
-        throw new TelegramNotifierAdapterException('Message param is required!', 400);
+        throw new NotifierAdapterException('Message param is required!', 400);
       }
 
       $botUrl = $this->getBotUrl();

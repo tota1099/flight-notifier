@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/tota1099/flight-notifier/badge.svg?branch=master)](https://coveralls.io/github/tota1099/flight-notifier?branch=master)
+
 # Flight Notifier
 
 A project to study about Clean Architecture and Clean Code.
@@ -6,13 +8,13 @@ A project to study about Clean Architecture and Clean Code.
 
 
 ```bash
-$ docker run -v "$PWD":/app composer composer install --ignore-platform-reqs
-$ docker run -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.4-cli  php src/main/getDataApi.php
-$ docker run -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.4-cli php src/main/cron.php
+docker run -v "$PWD":/app composer composer install --prefer-dist --no-progress
+docker run -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:8.1-cli  php src/main/getDataApi.php
+docker run -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:8.1-cli php src/main/cron.php
 ```
 
 ## Tests
 
 ```bash
-$ docker run -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.4-cli php vendor/bin/phpunit tests --color
+docker run -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:8.1-cli php vendor/bin/phpunit tests --testdox
 ```

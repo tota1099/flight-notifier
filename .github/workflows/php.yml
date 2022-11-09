@@ -1,0 +1,49 @@
+name: PHP Login Build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/checkout@v1    
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: 8.1
+
+    - name: Add PHP repository
+      run: sudo add-apt-repository ppa:ondrej/php
+    - name: Update apt
+      run: sudo apt update
+    - name: Install xdebug
+      run: sudo apt install php8.1-xdebug
+
+    - name: Cache Composer packages
+      id: composer-cache
+      uses: actions/cache@v2
+      with:
+        path: vendor
+        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-php-
+
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress
+
+    - name: Tests - Run
+      run: vendor/bin/phpunit --testdox
+    - name: Tests - Generate clover
+      run: vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+    - name: Upload coverage results to Coveralls
+      env:
+        COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        composer global require php-coveralls/php-coveralls
+        php-coveralls --coverage_clover=build/logs/clover.xml -v
