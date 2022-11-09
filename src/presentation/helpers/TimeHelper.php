@@ -11,7 +11,7 @@ class TimeHelper implements Time {
   }
 
   public function convertRFC3339ToDatetime(String $date) : String {
-    return (new \DateTime($date))->format('Y-m-d  H:i:s');
+    return (new \DateTime($date))->format('Y-m-d H:i:s');
   }
 
   public function getDiffInMinutes(String $date1, String $date2) : int {

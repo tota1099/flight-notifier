@@ -19,4 +19,10 @@ class TimeHelperTest extends TestCase {
 
     $this->assertEquals($sut->getDiffInMinutes($date1, $date2), 117);
   }
+
+  public function testConvertRFC3339ToDatetime() {
+    $sut = new TimeHelper();
+    $this->assertEquals($sut->convertRFC3339ToDatetime("2020-07-21T20:10:00+00:00"), '2020-07-21 20:10:00');
+    $this->assertEquals($sut->convertRFC3339ToDatetime("2022-03-21T20:11:00+00:00"), '2022-03-21 20:11:00');
+  }
 }
