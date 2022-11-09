@@ -6,9 +6,9 @@ class SqliteHelper {
 
   private $pdo;
 
-  public function connect():bool {
+  public function connect() :\PDO {
     if ($this->pdo == null) {
-      $this->pdo = new \PDO("sqlite:" . 'db/phpsqlite.db');
+      $this->pdo = new \PDO("sqlite:" . './phpnotifier.db');
     }
     return $this->pdo;
   }

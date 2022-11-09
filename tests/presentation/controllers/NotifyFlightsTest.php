@@ -10,6 +10,8 @@ use PHPUnit\Framework\TestCase;
 use App\presentation\controllers\NotifyFlights;
 use App\presentation\interfaces\Notifier;
 use App\presentation\interfaces\FlightMessage;
+use App\domain\usecases\AddNotifierLog;
+use App\domain\usecases\CheckLogByDateAndFlightNumber;
 
 class NotifyFlightsTest extends TestCase {
 
@@ -29,6 +31,8 @@ class NotifyFlightsTest extends TestCase {
 
     $notifierMock = $this->createMock(Notifier::class);
     $flightsMessageMock = $this->createMock(FlightMessage::class);
+    $checkLogByDateAndFlightNumber = $this->createMock(CheckLogByDateAndFlightNumber::class);
+    $addNotifierLog = $this->createMock(AddNotifierLog::class);
 
     $message = 'This is a example message!';
     $flightsMessageMock
@@ -45,6 +49,8 @@ class NotifyFlightsTest extends TestCase {
 
     $notifyFlights = new NotifyFlights(
       $notifierMock,
+      $addNotifierLog,
+      $checkLogByDateAndFlightNumber,
       $flightsMessageMock,
     );
     $notifyFlights->handle($flights);    

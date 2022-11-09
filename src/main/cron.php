@@ -8,6 +8,8 @@ use App\config\Config;
 use App\presentation\controllers\NotifyFlights;
 use App\presentation\services\ProcessFlights;
 use App\main\factories\NotifierFactory;
+use App\main\factories\AddNotifierLogFactory;
+use App\main\factories\GetCheckLogByDateAndFlightNumber;
 use App\presentation\services\FlightMessage;
 use App\presentation\helpers\TimeHelper;
 
@@ -21,6 +23,8 @@ $flightMessage = new FlightMessage();
 
 if(!empty($flightsProcessed)) {
   $notifier = NotifierFactory::createNotifier();
-  $notifyFlights = new NotifyFlights($notifier, $flightMessage);
+  $notifierLog = AddNotifierLogFactory::createAddNotifierLog();
+  $notifierGetLog = GetCheckLogByDateAndFlightNumber::createGetNotifierLog();
+  $notifyFlights = new NotifyFlights($notifier, $notifierLog, $notifierGetLog, $flightMessage);
   $notifyFlights->handle($flightsProcessed);
 }
