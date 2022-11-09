@@ -31,8 +31,7 @@ class ProcessFlights {
       throw new ProcessFlightsException('The param data needs to be a json!');
     }
 
-    $dataToJson = json_decode($data, true);
-    $flights = $dataToJson['data'];
+    $flights = json_decode($data, true);
     $flightsToNotify = new Flights();
     foreach($flights as $key => $flights) {
       $flightsType = FlightTypes::ARRIVAL;

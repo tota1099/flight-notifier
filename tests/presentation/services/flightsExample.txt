@@ -1,63 +1,55 @@
-{
-    "pagination": {
-        "limit": 100,
-        "offset": 0,
-        "count": 17,
-        "total": 17
-    },
-    "data": [
-        {
-            "flight_date": "2020-07-21",
-            "flight_status": "scheduled",
-            "departure": {
-                "airport": "Hercilio Luz",
-                "timezone": "America\/Sao_Paulo",
-                "iata": "FLN",
-                "icao": "SBFL",
-                "terminal": null,
-                "gate": null,
-                "delay": null,
-                "scheduled": "2020-07-21T20:10:00+00:00",
-                "estimated": "2020-07-21T20:10:00+00:00",
-                "actual": null,
-                "estimated_runway": null,
-                "actual_runway": null
-            },
-            "arrival": {
-                "airport": "Aeroporto Internacional Guarulhos",
-                "timezone": "America\/Sao_Paulo",
-                "iata": "GRU",
-                "icao": "SBGR",
-                "terminal": "2",
-                "gate": null,
-                "baggage": null,
-                "delay": null,
-                "scheduled": "2020-07-21T21:15:00+00:00",
-                "estimated": "2020-07-21T21:15:00+00:00",
-                "actual": null,
-                "estimated_runway": null,
-                "actual_runway": null
-            },
-            "airline": {
-                "name": "Airline A",
-                "iata": "FL",
-                "icao": "FLN"
-            },
-            "flight": {
-                "number": "4689",
-                "iata": "LH4689",
-                "icao": "DLH4689",
-                "codeshared": {
-                    "airline_name": "latam airlines brasil",
-                    "airline_iata": "jj",
-                    "airline_icao": "tam",
-                    "flight_number": "3511",
-                    "flight_iata": "jj3511",
-                    "flight_icao": "tam3511"
-                }
-            },
-            "aircraft": null,
-            "live": null
-        }
-    ]
-}
+[
+    {
+        "flight_date": "2020-07-21",
+        "flight_status": "scheduled",
+        "departure": {
+            "airport": "Hercilio Luz",
+            "timezone": "America\/Sao_Paulo",
+            "iata": "FLN",
+            "icao": "SBFL",
+            "terminal": null,
+            "gate": null,
+            "delay": null,
+            "scheduled": "2020-07-21T20:10:00+00:00",
+            "estimated": "2020-07-21T20:10:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        "arrival": {
+            "airport": "Aeroporto Internacional Guarulhos",
+            "timezone": "America\/Sao_Paulo",
+            "iata": "GRU",
+            "icao": "SBGR",
+            "terminal": "2",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2020-07-21T21:15:00+00:00",
+            "estimated": "2020-07-21T21:15:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        "airline": {
+            "name": "Airline A",
+            "iata": "FL",
+            "icao": "FLN"
+        },
+        "flight": {
+            "number": "4689",
+            "iata": "LH4689",
+            "icao": "DLH4689",
+            "codeshared": {
+                "airline_name": "latam airlines brasil",
+                "airline_iata": "jj",
+                "airline_icao": "tam",
+                "flight_number": "3511",
+                "flight_iata": "jj3511",
+                "flight_icao": "tam3511"
+            }
+        },
+        "aircraft": null,
+        "live": null
+    }
+]

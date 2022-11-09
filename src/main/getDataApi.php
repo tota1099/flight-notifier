@@ -11,12 +11,14 @@ Config::init();
 
 $apiUrl = $_ENV['API_URL'] . "/flights?";
 $apiUrl .= "access_key=" . $_ENV['API_KEY'];
-$apiUrl .= "&dep_iata=" . $_ENV['AIRPORT'];
 
 $request = RequestFactory::createRequest();
-$apiData = $request->get($apiUrl);
+$apiDataDeparture = $request->get($apiUrl . "&dep_iata=" . $_ENV['AIRPORT']);
+$apiDataArrive = $request->get($apiUrl . "&arr_iata=" . $_ENV['AIRPORT']);
 
-$json = json_decode($apiData);
+$jsonDeparture = json_decode($apiDataDeparture, true);
+$jsonArrive = json_decode($apiDataArrive, true);
+$voos = array_merge($jsonArrive["data"], $jsonDeparture["data"]);
 $fp = fopen('data/flights.txt', 'w');
-fwrite($fp, json_encode($json, JSON_PRETTY_PRINT));
+fwrite($fp, json_encode(array_merge($voos) , JSON_PRETTY_PRINT));
 fclose($fp);
