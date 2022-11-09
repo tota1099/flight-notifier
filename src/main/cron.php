@@ -17,7 +17,7 @@ Config::init();
 
 $timeNotification = $_ENV['NOTIFICATION_MINUTES'];
 $airport = $_ENV['AIRPORT']; 
-$apiFlights = file_get_contents("data/flights.txt");
+$apiFlights = file_get_contents("flights.txt");
 $flightsProcessed = ( new ProcessFlights(new TimeHelper(), $timeNotification, $airport))->handle($apiFlights);
 $flightMessage = new FlightMessage();
 

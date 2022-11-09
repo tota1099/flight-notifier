@@ -3,5 +3,5 @@ composer.phar
 node_modules/
 .env
 report/
-data
 .phpunit.result.cache
+phpnotifier.db
