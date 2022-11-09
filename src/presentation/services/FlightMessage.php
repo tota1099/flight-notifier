@@ -2,8 +2,8 @@
 
 namespace App\presentation\services;
 
-use App\domain\usecases\FlightModel;
-use App\domain\usecases\FlightTypes;
+use App\domain\models\FlightModel;
+use App\domain\models\FlightTypes;
 use App\presentation\interfaces\FlightMessage as InterfacesFlightMessage;
 
 class FlightMessage implements InterfacesFlightMessage {

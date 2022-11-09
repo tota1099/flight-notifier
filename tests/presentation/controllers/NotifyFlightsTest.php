@@ -2,10 +2,10 @@
 
 namespace Tests\presentation\controllers;
 
-use App\domain\usecases\Airport;
-use App\domain\usecases\FlightModel;
-use App\domain\usecases\Flights;
-use App\domain\usecases\FlightTypes;
+use App\domain\models\Airport;
+use App\domain\models\FlightModel;
+use App\domain\models\Flights;
+use App\domain\models\FlightTypes;
 use PHPUnit\Framework\TestCase;
 use App\presentation\controllers\NotifyFlights;
 use App\presentation\interfaces\Notifier;

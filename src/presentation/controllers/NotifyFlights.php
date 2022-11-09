@@ -3,7 +3,7 @@
 namespace App\presentation\controllers;
 
 use App\presentation\interfaces\Notifier;
-use App\domain\usecases\Flights;
+use App\domain\models\Flights;
 use App\presentation\interfaces\FlightMessage;
 
 class NotifyFlights {

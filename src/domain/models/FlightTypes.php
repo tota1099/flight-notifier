@@ -1,6 +1,6 @@
 <?php
 
-namespace App\domain\usecases;
+namespace App\domain\models;
 
 class FlightTypes
 {

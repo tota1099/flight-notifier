@@ -2,10 +2,10 @@
 
 namespace App\presentation\services;
 
-use App\domain\usecases\Airport;
-use App\domain\usecases\FlightModel;
-use App\domain\usecases\Flights;
-use App\domain\usecases\FlightTypes;
+use App\domain\models\Airport;
+use App\domain\models\FlightModel;
+use App\domain\models\Flights;
+use App\domain\models\FlightTypes;
 use App\presentation\exceptions\ProcessFlightsException;
 use App\presentation\helpers\Helper;
 use App\presentation\interfaces\Time;

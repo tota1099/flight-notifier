@@ -1,6 +1,6 @@
 <?php
 
-namespace App\domain\usecases;
+namespace App\domain\models;
 
 class Flights extends \ArrayObject {
   public function offsetSet($index, $newval)
